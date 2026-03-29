@@ -1,0 +1,57 @@
+<!-- 
+  Student Name: Brittney Lobban
+  Student ID: 2406413
+  Course: Web Programming
+  Lab: Individual Assignment 2
+  Date: 28 March 2026 
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - Template Haven</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+  <img src="assets/images/logo.png" alt="Template Haven Logo" class="logo">
+  <h1>Your Cart</h1>
+
+  <nav>
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+    <a href="index.html">Home</a>
+    <a href="checkout.html">Checkout</a>
+  </nav>
+</header>
+
+<main>
+
+  <table id="cart-table">
+    <tr>
+      <th>Item</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Subtotal</th>
+    </tr>
+    <!-- JS will insert items here -->
+  </table>
+
+  <p id="tax">Tax: $0</p>
+  <p><strong id="total">Total: $0</strong></p>
+
+  <button onclick="clearCart()">Clear All</button>
+  <button onclick="window.location.href='checkout.html'">Checkout</button>
+
+</main>
+
+<script src="js/cart.js"></script>
+<script src="js/cart-page.js"></script>
+
+</body>
+</html>

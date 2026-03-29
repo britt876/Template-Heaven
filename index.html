@@ -1,0 +1,93 @@
+<!-- 
+  Student Name: Brittney Lobban
+  Student ID: 2406413
+  Course: Web Programming
+  Lab: Individual Assignment 2
+  Date: 28 March 2026 
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template Haven</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Meta Description -->
+  <meta name="description" content="Template Haven - Download digital templates, wallpapers, and planners.">
+</head>
+
+<body>
+
+  <header>
+    <img src="assets/images/logo.png" alt="Template Haven Logo" class="logo">
+    <h1>Template Haven</h1>
+
+    <nav>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="about.html">About Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="shop" class="product-grid">
+
+      <!-- Product 1 -->
+      <div class="product">
+        <img src="assets/images/wallpaper1.png" alt="Aesthetic sunset phone wallpaper">
+        <h2>Sunset Aesthetic Wallpaper</h2>
+        <p>$5</p>
+        <button onclick="addToCart('Sunset Aesthetic Wallpaper', 5)">Add to Cart</button>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product">
+        <img src="assets/images/wallpaper2.png" alt="Minimalist dark phone wallpaper">
+        <h2>Minimalist Dark Wallpaper</h2>
+        <p>$5</p>
+        <button onclick="addToCart('Minimalist Dark Wallpaper', 5)">Add to Cart</button>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product">
+        <img src="assets/images/resume1.png" alt="Professional resume template design">
+        <h2>Professional Resume Template</h2>
+        <p>$10</p>
+        <button onclick="addToCart('Professional Resume Template', 10)">Add to Cart</button>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product">
+        <img src="assets/images/resume2.png" alt="Modern creative resume template">
+        <h2>Creative Resume Template</h2>
+        <p>$10</p>
+        <button onclick="addToCart('Creative Resume Template', 10)">Add to Cart</button>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Template Haven</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/cart.js"></script>
+  <script src="js/showCart.js"></script>
+  <script>
+    console.log("index origin", { location: location.href, origin: location.origin, loggedIn: localStorage.getItem("loggedIn"), username: localStorage.getItem("username"), appOrigin: localStorage.getItem("appOrigin") });
+    if (localStorage.getItem("loggedIn") !== "true" || localStorage.getItem("appOrigin") !== location.origin) {
+      console.warn("redirect to login: loggedIn=", localStorage.getItem("loggedIn"), "appOrigin=", localStorage.getItem("appOrigin"));
+      window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+</html>

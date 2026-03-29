@@ -1,0 +1,50 @@
+<!--  
+  Student Name: Brittney Lobban
+  Student ID: 2406413
+  Course: Web Programming
+  Lab: Individual Assignment 2
+  Date: 28 March 2026  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Template Haven</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Login</h1>
+</header>
+
+<main>
+  <form onsubmit="loginUser(event)">
+    <!-- Username field -->
+    <label for="loginUser">Username:</label>
+    <input type="text" id="loginUser" name="username" required>
+
+    <!-- Password field -->
+    <label for="loginPass">Password:</label>
+    <input type="password" id="loginPass" name="password" required>
+
+    <!-- Submit button -->
+    <button type="submit">Login</button>
+  </form>
+</main>
+
+<script src="js/auth.js"></script>
+<script>
+  console.log("login origin", {
+    location: location.href,
+    origin: location.origin,
+    username: localStorage.getItem("username"),
+    loggedIn: localStorage.getItem("loggedIn")
+  });
+  localStorage.setItem("appOrigin", location.origin);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!-- 
+  Student Name: Brittney Lobban
+  Student ID: 2406413
+  Course: Web Programming
+  Lab: Individual Assignment 2
+  Date: 28 March 2026 
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - Template Haven</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Register</h1>
+</header>
+
+<main>
+  <form onsubmit="registerUser(event)">
+    <label>Username:</label>
+    <input type="text" id="regUser" required>
+
+    <label>Password:</label>
+    <input type="password" id="regPass" required>
+
+    <button type="submit">Register</button>
+  </form>
+</main>
+
+<script src="js/auth.js"></script>
+
+</body>
+</html>
